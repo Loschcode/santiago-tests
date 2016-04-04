@@ -40,16 +40,19 @@ WHERE c.title = "programación" AND s.name = "Laurent"
 
 >4.­ Escriba un Query que entregue a los alumnos y el promedio que tiene en cada ramo.
 
+```
 SELECT AVG(student_course_tests.grade) AS average, s.*, courses.title FROM student_course_tests
 
 INNER JOIN students AS s ON student_course_tests.student_id = s.id
 INNER JOIN student_courses ON s.id = student_courses.student_id 
 INNER JOIN courses ON courses.id = student_courses.course_id GROUP BY s.id, courses.title
+```
 
 >5.­ Escriba un Query que lista a todos los alumnos con más de un ramo conpromedio rojo.
 
 *NOTE : I had to ask around about the Chilean grade system (below 4.0/7 is "promedio rojo") to make this as accurate as possible for the test.*
 
+```
 SELECT savg.*
 FROM (
 
@@ -60,6 +63,7 @@ INNER JOIN student_courses ON s.id = student_courses.student_id
 INNER JOIN courses ON courses.id = student_courses.course_id GROUP BY s.id, courses.title
 
 ) AS savg GROUP BY savg.sid HAVING SUM( IF (savg.avg < 4,1,0) ) > 1
+```
 
 >6.­ Se tiene una tabla con información de jugadores de tenis: PLAYERS(Nombre, Pais, Ranking). Suponga que Ranking es un número de 1 a 100 que es distinto para cada jugador. Si la tabla en un momento dado tiene solo 20 tuplas, indique cuantas tuplas tiene la tabla que resulta de la siguiente consulta: SELECT c1.Nombre, c2.Nombre FROM PLAYERS c1, PLAYERS c2 WHERE c1.Ranking > c2.Ranking : a) 400 b) 190 c) 20 d) imposible saberlo
 
