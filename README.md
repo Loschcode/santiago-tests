@@ -92,6 +92,6 @@ Please check `front`
 
 I encapsulated the `ruby` part in a general scope so you can launch exercises and change what's executed by doing a `ruby runner.rb` in the folder ; `binding.pry` is available too for testing purpose. The different exercises should be usable in standalone :)
 
-General TDD has been done for the whole `ruby` section despite the instructions weren't clear on the fact i should do it or not. They stay very general. Just run `rpsec` in the folder to run them all.
+General TDD has been done for the whole `ruby` section despite the instructions weren't clear on the fact i should do it or not. They stay very general. Just run `rpsec` in the folder `ruby` to run them all.
 
 _<48 hours were honestly short to do so many exercises properly. I hope it's taken into consideration ; I had to do it all straight ..._
