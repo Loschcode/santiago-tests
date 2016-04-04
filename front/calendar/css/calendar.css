@@ -1,0 +1,57 @@
+/**
+ * Calendar
+ * @author Laurent Schaffner
+ * @note I use the BEM convention, more details here: https://en.bem.info/
+ */
+
+body {
+  font-family: 'Verdana';
+  font-size: 14px;
+}
+
+.title__heading {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center;
+}
+
+.calendar__wrapper {
+  width: 960px;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3em;
+}
+
+.calendar__col {
+  width: 12%;
+  float: left;
+}
+  .calendar__col--hours {
+    width: 8%;
+  }
+
+
+.calendar__cell {
+  width: 100%;
+  text-align: center;
+  padding-top: 0.7em;
+  padding-bottom: 0.7em;
+  height: 1em;
+  border-bottom: 1px solid #00BAD2;
+
+}
+  .calendar__cell--head, .calendar__cell--hour {
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;
+    background-color: #00BAD2;
+    color: white;
+    text-transform: capitalize;
+    border-bottom: 0;
+    border-bottom: 1px solid #00BAD2;
+
+  }
+
+  .calendar__cell--highlight {
+    background-color: #ecf0f1;
+  }
