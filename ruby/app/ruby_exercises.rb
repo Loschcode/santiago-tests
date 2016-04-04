@@ -16,7 +16,7 @@ class RubyExercise
     puts 4506778.to_letters
 
     # Exercise 3.
-    puts knight_tour.go(6,6)
+    puts knight_tour.go(8,8)
 
     # binding.pry
 
