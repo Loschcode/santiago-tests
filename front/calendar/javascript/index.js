@@ -1,6 +1,5 @@
 /**
  * Init the calendar with dummy datas
- * @author Laurent Schaffner
  */
 (function() {
 

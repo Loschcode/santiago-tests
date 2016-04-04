@@ -1,6 +1,5 @@
 /**
  * Calendar
- * @author Laurent Schaffner
  */
 var Calendar = (function() {
 

@@ -1,13 +1,13 @@
 class Card
 
-  attr_accessor :suit, :rank, :value
+  attr_accessor :suit, :rank, :id
 
   require_relative 'data'
 
   def initialize(value)
     @rank = RANKS.sample
     @suit = SUITS.sample
-    @value = value
+    @id = id
     self
   end
 
